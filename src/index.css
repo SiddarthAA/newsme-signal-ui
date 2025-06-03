@@ -33,7 +33,7 @@
     --input: 210 20% 15%;
     --ring: 195 100% 42%;
 
-    --radius: 0.5rem;
+    --radius: 1.25rem;
 
     --sidebar-background: 210 20% 2%;
     --sidebar-foreground: 0 0% 90%;
@@ -53,8 +53,23 @@
 
   body {
     @apply bg-background text-foreground font-inter;
-    background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%);
+    background: linear-gradient(135deg, #0a0f2c 0%, #131d47 50%, #1a2766 100%);
     min-height: 100vh;
+    position: relative;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(6, 182, 212, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
   }
 }
 
@@ -70,6 +85,14 @@
   
   .glow-effect:hover {
     box-shadow: 0 0 40px rgba(6, 182, 212, 0.6);
+  }
+  
+  .form-card {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1.25rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   }
   
   .underline-animation {
@@ -99,5 +122,9 @@
   
   .trusted-logo:hover {
     filter: grayscale(0%) brightness(1) blur(0px);
+  }
+
+  .otp-input {
+    @apply w-12 h-12 text-center text-xl font-instrument-serif bg-white/5 border border-white/20 rounded-lg focus:border-electric-cyan-400 focus:ring-2 focus:ring-electric-cyan-400/50 transition-all duration-200;
   }
 }

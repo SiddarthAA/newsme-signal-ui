@@ -13,14 +13,14 @@ const QuoteSection = () => {
 
       <div className="max-w-4xl mx-auto text-center space-y-8 relative z-10">
         {/* Main Quote */}
-        <blockquote className="text-4xl md:text-5xl lg:text-6xl font-space-grotesk font-light leading-tight tracking-tight text-white">
+        <blockquote className="text-4xl md:text-5xl lg:text-6xl font-instrument-serif font-semibold leading-tight tracking-tight text-white">
           Filter the noise.
           <br />
           <span className="text-electric-cyan-400">Focus on what matters.</span>
         </blockquote>
 
         {/* Caption */}
-        <p className="text-lg md:text-xl text-gray-400 font-inter font-light max-w-2xl mx-auto">
+        <p className="text-lg md:text-xl text-gray-400 font-instrument-serif font-light max-w-2xl mx-auto">
           NewsMe scans headlines, filters bias, and delivers what truly matters.
         </p>
 
