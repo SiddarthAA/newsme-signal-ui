@@ -1,5 +1,5 @@
 
-import { Radio, Globe, TrendingUp } from 'lucide-react';
+import { Radio } from 'lucide-react';
 
 const Header = () => {
   return (
@@ -20,19 +20,6 @@ const Header = () => {
             <p className="text-xs text-gray-400 font-inter tracking-wide">Intelligence Network</p>
           </div>
         </div>
-
-        {/* Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
-          <a href="#features" className="text-gray-300 hover:text-white text-sm font-inter tracking-wide transition-colors duration-300">
-            Features
-          </a>
-          <a href="#insights" className="text-gray-300 hover:text-white text-sm font-inter tracking-wide transition-colors duration-300">
-            Insights
-          </a>
-          <a href="#enterprise" className="text-gray-300 hover:text-white text-sm font-inter tracking-wide transition-colors duration-300">
-            Enterprise
-          </a>
-        </nav>
 
         {/* CTA Button */}
         <div className="flex items-center space-x-4">

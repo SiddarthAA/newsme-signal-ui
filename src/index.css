@@ -137,14 +137,30 @@
   .trusted-logo {
     filter: grayscale(100%) brightness(0.4) blur(0.5px);
     transition: all 0.3s ease;
+    position: relative;
   }
   
   .trusted-logo:hover {
     filter: grayscale(0%) brightness(1) blur(0px);
+    transform: scale(1.05);
+  }
+
+  .trusted-logo:hover::before {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+    animation: pulse-glow 2s ease-in-out infinite;
   }
 
   .otp-input {
     @apply w-14 h-14 text-center text-xl font-instrument-serif bg-white/5 border border-white/20 rounded-xl focus:border-electric-cyan-400 focus:ring-2 focus:ring-electric-cyan-400/30 transition-all duration-300 hover:border-white/30;
+  }
+
+  .otp-input-minimal {
+    @apply w-12 h-12 text-center text-lg font-instrument-serif bg-white/5 border border-white/20 rounded-lg focus:border-electric-cyan-400 focus:ring-2 focus:ring-electric-cyan-400/30 transition-all duration-300 hover:border-white/30;
   }
 
   .slide-in-left {
@@ -185,5 +201,16 @@
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 1rem;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
   }
 }
