@@ -63,17 +63,17 @@ const MultiStepSignupForm = () => {
           <form onSubmit={handleEmailSubmit} className="space-y-6">
             <div className="space-y-4">
               <h2 className="text-2xl font-instrument-serif font-semibold text-white text-center">
-                Stay informed. Stay ahead with NewsMe
+                Ready to Get On Board?
               </h2>
               <p className="text-lg font-instrument-serif font-light text-gray-300 text-center">
-                Get a quick 5-minute email summary of top global news. Delivered daily.
+                Join 300,000+ professionals who trust NewsMe for their daily briefing. Get started in seconds.
               </p>
             </div>
             
             <div className="space-y-4">
               <Input
                 type="email"
-                placeholder="Enter your email address..."
+                placeholder="Enter your professional email..."
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="h-12 text-lg font-instrument-serif bg-white/5 border-white/20 text-white placeholder:text-gray-400 focus:border-electric-cyan-400 focus:ring-electric-cyan-400"
@@ -83,15 +83,15 @@ const MultiStepSignupForm = () => {
               <Button
                 type="submit"
                 disabled={isLoading || !email}
-                className="w-full h-12 bg-gradient-to-r from-electric-cyan-500 to-electric-cyan-600 hover:from-electric-cyan-400 hover:to-electric-cyan-500 text-black font-instrument-serif font-semibold tracking-wide glow-effect transition-all duration-300 uppercase"
+                className="w-full h-12 bg-gradient-to-r from-electric-cyan-500 to-electric-cyan-600 hover:from-electric-cyan-400 hover:to-electric-cyan-500 text-black font-instrument-serif font-semibold tracking-wide transition-all duration-300 uppercase shadow-lg shadow-electric-cyan-500/20"
               >
                 {isLoading ? (
                   <>
                     <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                    Processing...
+                    Getting you ready...
                   </>
                 ) : (
-                  'Subscribe Now'
+                  'Get On Board'
                 )}
               </Button>
             </div>
@@ -105,17 +105,17 @@ const MultiStepSignupForm = () => {
           <form onSubmit={handleTopicsSubmit} className="space-y-6">
             <div className="space-y-4">
               <h3 className="text-xl font-instrument-serif font-semibold text-white text-center">
-                What topics are you interested in?
+                Customize Your Intelligence Feed
               </h3>
               <p className="text-sm text-gray-400 text-center">
-                Help us personalize your newsletter experience
+                Tell us what matters to you and we'll tailor your daily brief
               </p>
             </div>
             
             <div className="space-y-4">
               <Input
                 type="text"
-                placeholder="e.g., AI, Finance, World News, Science"
+                placeholder="e.g., Technology, Markets, Geopolitics, Innovation"
                 value={topics}
                 onChange={(e) => setTopics(e.target.value)}
                 className="h-12 text-lg font-instrument-serif bg-white/5 border-white/20 text-white placeholder:text-gray-400 focus:border-electric-cyan-400 focus:ring-electric-cyan-400"
@@ -125,15 +125,15 @@ const MultiStepSignupForm = () => {
               <Button
                 type="submit"
                 disabled={isLoading || !topics}
-                className="w-full h-12 bg-gradient-to-r from-electric-cyan-500 to-electric-cyan-600 hover:from-electric-cyan-400 hover:to-electric-cyan-500 text-black font-instrument-serif font-semibold tracking-wide glow-effect transition-all duration-300 uppercase"
+                className="w-full h-12 bg-gradient-to-r from-electric-cyan-500 to-electric-cyan-600 hover:from-electric-cyan-400 hover:to-electric-cyan-500 text-black font-instrument-serif font-semibold tracking-wide transition-all duration-300 uppercase shadow-lg shadow-electric-cyan-500/20"
               >
                 {isLoading ? (
                   <>
                     <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                    Sending verification...
+                    Personalizing experience...
                   </>
                 ) : (
-                  'Continue'
+                  'Continue Setup'
                 )}
               </Button>
             </div>
@@ -147,10 +147,10 @@ const MultiStepSignupForm = () => {
           <form onSubmit={handleOTPSubmit} className="space-y-6">
             <div className="space-y-4">
               <h3 className="text-xl font-instrument-serif font-semibold text-white text-center">
-                Enter the 4-digit code
+                Verify Your Access
               </h3>
               <p className="text-sm text-gray-400 text-center">
-                We just sent a verification code to <span className="text-electric-cyan-400">{email}</span>
+                We've sent a secure code to <span className="text-electric-cyan-400">{email}</span>
               </p>
             </div>
             
@@ -173,15 +173,15 @@ const MultiStepSignupForm = () => {
               <Button
                 type="submit"
                 disabled={isLoading || otp.length !== 4}
-                className="w-full h-12 bg-gradient-to-r from-electric-cyan-500 to-electric-cyan-600 hover:from-electric-cyan-400 hover:to-electric-cyan-500 text-black font-instrument-serif font-semibold tracking-wide glow-effect transition-all duration-300 uppercase"
+                className="w-full h-12 bg-gradient-to-r from-electric-cyan-500 to-electric-cyan-600 hover:from-electric-cyan-400 hover:to-electric-cyan-500 text-black font-instrument-serif font-semibold tracking-wide transition-all duration-300 uppercase shadow-lg shadow-electric-cyan-500/20"
               >
                 {isLoading ? (
                   <>
                     <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                    Verifying...
+                    Activating account...
                   </>
                 ) : (
-                  'Verify & Join'
+                  'Activate Account'
                 )}
               </Button>
               
@@ -191,7 +191,7 @@ const MultiStepSignupForm = () => {
                 disabled={isLoading}
                 className="w-full text-gray-400 hover:text-electric-cyan-400 text-sm font-instrument-serif underline-animation transition-colors duration-300"
               >
-                Resend OTP
+                Resend verification code
               </button>
             </div>
           </form>
@@ -208,16 +208,16 @@ const MultiStepSignupForm = () => {
             
             <div className="space-y-2">
               <h3 className="text-2xl font-instrument-serif font-semibold text-white">
-                You're all set!
+                Welcome Aboard!
               </h3>
               <p className="text-lg font-instrument-serif text-gray-300">
-                Welcome to NewsMe. Expect your first newsletter tomorrow morning.
+                You're now part of NewsMe's intelligence network. Your first briefing arrives tomorrow at 7 AM.
               </p>
             </div>
             
             <div className="pt-4">
               <p className="text-sm text-gray-400">
-                Interested in <span className="text-electric-cyan-400">{topics}</span>
+                Focused on <span className="text-electric-cyan-400">{topics}</span>
               </p>
             </div>
           </div>

@@ -1,5 +1,5 @@
 
-import { broadcast } from 'lucide-react';
+import { Radio } from 'lucide-react';
 
 const Header = () => {
   return (
@@ -8,7 +8,7 @@ const Header = () => {
         {/* Logo and Brand */}
         <div className="flex items-center space-x-3">
           <div className="relative">
-            <broadcast className="w-8 h-8 text-electric-cyan-400 animate-float" />
+            <Radio className="w-8 h-8 text-electric-cyan-400 animate-float" />
             <div className="absolute inset-0 w-8 h-8 text-electric-cyan-400 opacity-30 animate-glow"></div>
           </div>
           <h1 className="text-2xl font-instrument-serif font-semibold tracking-wider text-white">
